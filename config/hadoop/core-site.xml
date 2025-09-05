@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://namenode:9000</value>
+    </property>
+    
+    <property>
+        <name>hadoop.http.staticuser.user</name>
+        <value>root</value>
+    </property>
+    
+    <property>
+        <name>hadoop.proxyuser.root.hosts</name>
+        <value>*</value>
+    </property>
+    
+    <property>
+        <name>hadoop.proxyuser.root.groups</name>
+        <value>*</value>
+    </property>
+    
+    <!-- Configuration MongoDB -->
+    <property>
+        <name>mongo.job.input.format</name>
+        <value>com.mongodb.hadoop.MongoInputFormat</value>
+    </property>
+    
+    <property>
+        <name>mongo.job.output.format</name>
+        <value>com.mongodb.hadoop.MongoOutputFormat</value>
+    </property>
+    
+    <property>
+        <name>mongo.job.mapper</name>
+        <value>com.mongodb.hadoop.util.MongoTool</value>
+    </property>
+    
+    <property>
+        <name>mongo.job.reducer</name>
+        <value>com.mongodb.hadoop.util.MongoTool</value>
+    </property>
+</configuration>

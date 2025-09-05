@@ -1,0 +1,64 @@
+<!-- config/hadoop/hdfs-site.xml -->
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>file:///hadoop/dfs/name</value>
+    </property>
+    
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>file:///hadoop/dfs/data</value>
+    </property>
+    
+    <property>
+        <name>dfs.namenode.checkpoint.dir</name>
+        <value>file:///hadoop/dfs/namesecondary</value>
+    </property>
+    
+    <property>
+        <name>dfs.replication</name>
+        <value>2</value>
+    </property>
+    
+    <property>
+        <name>dfs.permissions</name>
+        <value>false</value>
+    </property>
+    
+    <property>
+        <name>dfs.namenode.http-address</name>
+        <value>namenode:9870</value>
+    </property>
+    
+    <property>
+        <name>dfs.namenode.secondary.http-address</name>
+        <value>secondarynamenode:9868</value>
+    </property>
+    
+    <property>
+        <name>dfs.webhdfs.enabled</name>
+        <value>true</value>
+    </property>
+    
+    <property>
+        <name>dfs.client.use.datanode.hostname</name>
+        <value>true</value>
+    </property>
+    
+    <property>
+        <name>dfs.datanode.use.datanode.hostname</name>
+        <value>true</value>
+    </property>
+    
+    <property>
+        <name>dfs.blocksize</name>
+        <value>268435456</value>
+    </property>
+    
+    <property>
+        <name>dfs.namenode.fs-limits.max-objects-per-directory</name>
+        <value>1048576</value>
+    </property>
+</configuration>
